@@ -1,5 +1,6 @@
 const today = new Date();
 const day = today.getDay();
+const timeNow = today.getHours();
 const firstSubjects = document.querySelector(".first-subjects");
 const lastSubjects = document.querySelector(".last-subjects");
 const firstThreeDays = document.querySelector(".first-three-days");
@@ -15,7 +16,7 @@ const subjects = [
 const links = [
   "https://us04web.zoom.us/wc/join/3074734435?pwd=UzcwWTNkNEg1TWgzY1ZaRU5rTFQwQT09",
   "https://zoom.us/wc/join/7782545356?pwd=c3N2SWNQaFFWSFJIaU5ITTFYVmdGQT09",
-  "https://us04web.zoom.us/wc/join/75109118527?pwd=V21NTXJNRjl2VzM1SXBiRkxNNHZ2dz09",
+  "https://us04web.zoom.us/wc/join/75109118527",
   "https://meet.google.com/kcq-uvjo-wns",
   "https://us04web.zoom.us/wc/join/78608296344?pwd=TTRpK2RYenNhZ1NUWUozSHk5cGlTZz09",
 ];
@@ -28,12 +29,13 @@ if (day === 6) {
 } else if (day === 0 || day === 1 || day === 2) {
   // firstSubjects.classList.remove("opacity-0");
   subFirst(day);
+  if (timeNow === 14 || timeNow === 14) {
+    alert("OOP ko password hala hai");
+  }
 } else {
   // lastSubjects.classList.remove("opacity-0");
   subLast(day);
 }
-
-console.log(day);
 
 function subFirst(day) {
   let element = `<ul class="subjects s1">
